@@ -1,0 +1,151 @@
+:root {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  --global-border-radius: 12px;
+  --header-color: rgba(255, 255, 255, 0.808);
+  --text-color: rgba(255, 255, 255, 0.753);
+}
+
+*,
+*::after,
+*::before {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  width: 20rem;
+  height: 30rem;
+  background-color: white;
+  color: white;
+  margin: 2rem auto;
+  border-radius: var(--global-border-radius);
+  padding: 1.5rem 1.2rem;
+  background: url("./assets/ocean.jpg");
+  background-position: center;
+  border: 1px solid rgba(128, 128, 128, 0.555);
+}
+
+h2 {
+  font-family: "Ubuntu", sans-serif;
+  text-transform: capitalize;
+  color: var(--header-color);
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+}
+
+label {
+  text-transform: capitalize;
+  color: var(--header-color);
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 200;
+}
+
+header .inputContainer {
+  background-color: gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding: 0.7rem;
+}
+
+input[type="text"],
+button {
+  border: none;
+  outline: none;
+}
+
+input[type="text"] {
+  width: 70%;
+  padding: 0.3rem;
+}
+
+button {
+  padding: 0.3rem 0.8rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: linear-gradient(-90deg, #0f092f, #5b567e);
+  color: white;
+}
+
+/* STYLE FOR TODO LIST */
+.tasksContainer h3 {
+  font-family: "Ubuntu", sans-serif;
+  color: var(--header-color);
+  margin-top: 25px;
+}
+
+.emptyTask {
+  width: 100%;
+  text-transform: capitalize;
+  padding: 3rem;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 40%;
+}
+
+.emptyTask::first-letter {
+  color: crimson;
+  font-weight: 600;
+  background-color: rgba(220, 20, 60, 0.158);
+  padding: 0.1rem 0.5rem;
+  margin-right: 0.5rem;
+  box-shadow: 1px 2px 3px 2px crimson;
+}
+
+h2::first-letter,
+h3::first-letter {
+  color: #5b567e;
+  color: gray;
+  color: crimson;
+}
+footer {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer p {
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  animation: animateText 8s linear infinite;
+  transition: all 0.5s;
+}
+
+footer button {
+  font-size: 12.5px;
+  border-radius: 5px;
+  padding: 0.5rem 0.7rem;
+  background: linear-gradient(-90deg, black, crimson);
+  color: white;
+}
+
+footer button:hover {
+  background: linear-gradient(90deg, black, crimson);
+  color: white;
+}
+
+@keyframes animateText {
+  100% {
+    transform: translateX(-100%);
+    -moz-transform: translate(-100%);
+    -webkit-transform: translateX(-100%);
+  }
+}

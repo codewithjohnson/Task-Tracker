@@ -1,0 +1,74 @@
+:root {
+  --text-color: rgba(255, 255, 255, 0.849);
+}
+
+ul,
+li {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  list-style-type: none;
+  accent-color: crimson;
+}
+
+.taskList {
+  margin-top: 15px;
+  height: 200px;
+  overflow: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  transition: all 0.5s;
+}
+
+.taskList::-webkit-scrollbar {
+  display: none;
+}
+
+.Task,
+.left,
+.right {
+  display: flex;
+}
+
+.Task {
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.336);
+}
+
+.Task:not(:first-child) {
+  margin-top: 20px;
+}
+
+.left {
+  gap: 10px;
+  align-items: center;
+  width: 70%;
+}
+
+.left .taskContent {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--text-color);
+  word-wrap: break-word;
+  width: 90%;
+}
+
+.right {
+  gap: 10px;
+  align-items: center;
+  color: var(--text-color);
+}
+
+.right span {
+  cursor: pointer;
+  padding: 0.2rem;
+}
+
+.right span:not(:first-child):hover {
+  background-color: crimson;
+}
+
+.right > span:first-child:hover {
+  background-color: teal;
+}
